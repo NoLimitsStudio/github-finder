@@ -60,7 +60,6 @@ export default {
   },
   data: () => ({
     search: '',
-    users: [],
     currentSort: 'name',
     currentSortDir: 'desc',
     page: {
