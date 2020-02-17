@@ -1,12 +1,48 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <header>
+      <div class="navbar">
+        <div class="container">
+          <div class="navbar-content">
+            <div class="logo">GitHub Finder</div>
+            <!--            <ul class="navbar-list">-->
+            <!--              <li class="navbar-item" v-for="link in links" :key="link.title">-->
+            <!--                <router-link class="navbar-link" :title="link.title" :to="link.url" active-class="active">-->
+            <!--                  {{ link.title }}-->
+            <!--                </router-link>-->
+            <!--              </li>-->
+            <!--            </ul>-->
+          </div>
+        </div>
+      </div>
+    </header>
     <router-view/>
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+
+export default {
+  name: 'Home',
+  components: {
+  },
+  data () {
+    return {
+      links: {
+        home: {
+          title: 'Home',
+          url: '/'
+        },
+        about: {
+          title: 'About',
+          url: '/about'
+        }
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
